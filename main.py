@@ -10,8 +10,8 @@ def balance_reaction(reaction): #"Fe2O3 + H2 -> Fe + H2O"
     product_atoms = su.count_atoms_in_reaction(products)
 
     # 2.build equation and solve
-    equations, coefficients = build_equations(reactant_atoms, product_atoms)
-    coefficients = my_solve(equations, coefficients) + [1]
+    equations, coefficients = su.build_equations(reactant_atoms, product_atoms)
+    coefficients = su.my_solve(equations, coefficients) + [1]
 
     return coefficients # [1/3, 1, 2/3, 1]
 
