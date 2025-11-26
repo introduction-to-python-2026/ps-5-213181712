@@ -3,7 +3,7 @@ def split_before_uppercases(formula):
     start_sub=0
     if formula== "":
       return split_formula
-    for i in range(1, len(formula)):
+    for i  in range(1,len(formula)):
       if formula[i].isupper():
         split_formula.append(formula[start_sub:i])
         start_sub=i
@@ -17,10 +17,10 @@ def split_at_digit(formula):
         if formula[digit_location].isdigit() :
             break
         digit_location += 1
-        if digit_location > len(formula)-1 :
-            return (formula,1)
-        return (formula[0:digit_location],int(formula[digit_location:len(formula)])
-   
+    if digit_location > len(formula)-1 :
+        return (formula,1)
+    return (formula[0:digit_location],int(formula[digit_location:len(formula)]))
+
 
 def count_atoms_in_molecule(molecular_formula):
     count = {}
@@ -29,10 +29,10 @@ def count_atoms_in_molecule(molecular_formula):
         split_element=split_at_digit(element)
         count[split_element[0]]=split_element[1]
     return count
-    
+
 
 def parse_chemical_reaction(reaction_equation):
-    
+
     reaction_equation = reaction_equation.replace(" ", "")  # Remove spaces for easier parsing
     reactants, products = reaction_equation.split("->")
     return reactants.split("+"), products.split("+")
