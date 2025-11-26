@@ -1,4 +1,4 @@
-def split_by_uppercases(formula):
+def split_before_uppercases(formula):
     split_formula=[]
     start_sub=0
     if formula== "":
