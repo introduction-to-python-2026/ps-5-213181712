@@ -13,7 +13,7 @@ for i in range(1, len(formula)):
         parts.append(formula[start:i])
         start = i
     
-    part.append(formula[start:]
+    part.append(formula[start:])
     return parts
 
 def split_at_number(formula):
