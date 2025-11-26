@@ -8,10 +8,10 @@ def split_by_capitals(formula):
     parts = [] 
     start = 0 
 
-for i in range(1, len(formula)):
-    if formula[i].isupper():
-        parts.append(formula[start:i])
-        start = i
+    for i in range(1, len(formula)):
+        if formula[i].isupper():
+            parts.append(formula[start:i])
+            start = i
     
     part.append(formula[start:])
     return parts
